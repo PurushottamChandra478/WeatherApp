@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunrise" translatesAutoresizingMaskIntoConstraints="NO" id="1K5-qw-CxB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun moon" translatesAutoresizingMaskIntoConstraints="NO" id="u89-vw-m03">
+                                <rect key="frame" x="145" y="366" width="124" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="u89-vw-m03" secondAttribute="height" multiplier="1:1" id="zG7-CJ-hFo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feel the weather around you!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBC-fq-4kf">
+                                <rect key="frame" x="20" y="515" width="374" height="26.5"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="22"/>
+                                <color key="textColor" red="0.99770647290000003" green="0.88325566050000004" blue="0.49011057619999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="u89-vw-m03" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="AtT-6V-iVh"/>
+                            <constraint firstItem="u89-vw-m03" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-20" id="Ma8-wA-4gy"/>
+                            <constraint firstAttribute="bottom" secondItem="1K5-qw-CxB" secondAttribute="bottom" id="YBZ-dk-jZ5"/>
+                            <constraint firstItem="1K5-qw-CxB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ZiS-Ob-6sV"/>
+                            <constraint firstItem="RBC-fq-4kf" firstAttribute="top" secondItem="u89-vw-m03" secondAttribute="bottom" constant="25" id="cld-fj-9vz"/>
+                            <constraint firstItem="u89-vw-m03" firstAttribute="width" secondItem="1K5-qw-CxB" secondAttribute="width" multiplier="0.3" id="huC-0Z-klL"/>
+                            <constraint firstItem="1K5-qw-CxB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p9K-P8-j94"/>
+                            <constraint firstItem="RBC-fq-4kf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pgg-c9-tJ2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1K5-qw-CxB" secondAttribute="trailing" id="q7O-Fy-KD1"/>
+                            <constraint firstItem="RBC-fq-4kf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wQc-95-Jtr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RBC-fq-4kf" secondAttribute="trailing" constant="20" id="yAI-FZ-3v3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sun moon" width="512" height="512"/>
+        <image name="sunrise" width="3950" height="4937"/>
+    </resources>
+</document>
