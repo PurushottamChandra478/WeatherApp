@@ -30,7 +30,7 @@ class HomeViewController: UIViewController {
     @IBOutlet var secondaryBackgroundview: UIView! {
         didSet {
             secondaryBackgroundview.clipsToBounds = true
-            secondaryBackgroundview.layer.cornerRadius = 15
+            secondaryBackgroundview.layer.cornerRadius = 20
             secondaryBackgroundview.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
 
         }

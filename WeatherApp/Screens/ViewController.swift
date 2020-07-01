@@ -12,6 +12,17 @@ import LocalAuthentication
 
 class ViewController: UIViewController {
 
+    @IBOutlet var appLogoImageView: UIImageView!
+    @IBOutlet var appTagLine: UILabel!
+    
+    @IBOutlet var mainView: UIView! {
+        didSet {
+            mainView.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height * 0.8)
+            mainView.layer.cornerRadius = 20
+            mainView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        }
+    }
+    
     @IBOutlet var emailTextfield: UITextField! {
         didSet {
             emailTextfield.delegate = self
@@ -45,11 +56,15 @@ class ViewController: UIViewController {
     
     var loginCompletion: (()->Void)? = nil
     private let localAuthenticationContext = LAContext()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        GIDSignIn.sharedInstance()?.presentingViewController = self        
+        UIView.animate(withDuration: 0.5) {
+            self.appLogoImageView.alpha = 0
+            self.appTagLine.alpha = 0
+            self.mainView.transform = CGAffineTransform.identity
+        }
+        GIDSignIn.sharedInstance()?.presentingViewController = self
     }
 
     @objc func loginDidTapped() {
