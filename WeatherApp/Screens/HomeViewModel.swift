@@ -34,8 +34,9 @@ class HomeViewModel {
     
     func callLocationAPI(withSearchText searchText: String) {
         if !searchText.isEmpty {
+            let finalSearchText = searchText.replacingOccurrences(of: " ", with: "%20")
             UIHelper.showActivityIndicator()
-            let task = API.request(.getLocationKey(searchText)) { (data, response, error) in
+            let task = API.request(.getLocationKey(finalSearchText)) { (data, response, error) in
                 UIHelper.hideActivityIndicator()
                 if let jsonData = data {
                     do {
